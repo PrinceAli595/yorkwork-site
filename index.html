@@ -1455,7 +1455,7 @@ const PRODUCTS = [
   {id:8,cat:'construction',title:'Retro Survey Targets for Site Survey & Control Stations',price:7.89,img:'HU0AAeSwC9ppOvAQ',meta:'options available',opts:true,
     desc:'Retro-reflective survey targets for total stations at control points. Short-range accuracy 3mm+2ppm; long-range 5mm+2ppm at 2.5 seconds.',
     specs:[['Brand','Unbranded'],['MPN','Survey Targets'],['Country of Origin','UK'],['Condition','New']],
-    options:[{label:'Size',values:['20×20mm','30×30mm','50×50mm','100×100mm']},{label:'Type',values:[{name:'Blue',img:8001},{name:'Orange',img:8002},{name:'Orange w/ Triangles',img:8003},{name:'Yellow',img:8},{name:'Red',img:8004},{name:'Silver',img:8005},{name:'Yellow Magnetic',img:8006},{name:'Silver w/ Triangles',img:8007}]},{label:'Quantity',priced:true,values:[{name:'20',price:7.89,variantId:801},{name:'50',price:13.89,variantId:802},{name:'100',price:16.89,variantId:803},{name:'200',price:31.89,variantId:804}]}]},
+    options:[{label:'Size & pack',priced:true,values:[{name:'20×20mm · 20 pack',price:7.89,variantId:801,size:'20'},{name:'20×20mm · 30 pack',price:11.79,variantId:805,size:'20'},{name:'20×20mm · 50 pack',price:13.89,variantId:802,size:'20'},{name:'20×20mm · 100 pack',price:16.89,variantId:803,size:'20'},{name:'20×20mm · 200 pack',price:31.89,variantId:804,size:'20'},{name:'30×30mm · 20 pack',price:8.89,variantId:806,size:'30'},{name:'30×30mm · 30 pack',price:12.89,variantId:807,size:'30'},{name:'30×30mm · 50 pack',price:17.89,variantId:808,size:'30'},{name:'30×30mm · 100 pack',price:29.89,variantId:809,size:'30'},{name:'50×50mm · 20 pack',price:13.89,variantId:810,size:'50'},{name:'50×50mm · 30 pack',price:18.89,variantId:811,size:'50'},{name:'50×50mm · 50 pack',price:32.89,variantId:812,size:'50'},{name:'100×100mm Yellow · 10 pack',price:32.89,variantId:813,size:'100'},{name:'100×100mm Yellow · 20 pack',price:63.89,variantId:814,size:'100'},{name:'100×100mm Yellow Magnetic · 10 pack',price:36.89,variantId:815,size:'100'},{name:'100×100mm Yellow Magnetic · 20 pack',price:71.89,variantId:816,size:'100'}]},{label:'Colour',values:[{name:'Blue',img:8001,sizes:'20'},{name:'Orange',img:8002,sizes:'20,30,50'},{name:'Orange w/ Triangles',img:8003,sizes:'20,30'},{name:'Yellow',img:8,sizes:'20,30,50'},{name:'Red',img:8004,sizes:'20'},{name:'Silver',img:8005,sizes:'20,30,50'},{name:'Silver w/ Triangles',img:8007,sizes:'20'}]}]},
   {id:9,cat:'construction',title:'Plastic Barrier Mesh Safety Fence Netting',price:12.89,img:'~9sAAeSwWvdpOFKa',meta:'14 sold · options available',opts:true,
     desc:'Heavy-duty orange plastic mesh safety fencing and barrier netting for site or garden use.',
     specs:[['Type','Mesh Fencing'],['Material','Plastic'],['Height','1m'],['Length','50m'],['Country of Origin','UK'],['Condition','New']],
@@ -1647,10 +1647,22 @@ const PRODUCTS = [
   {id:403,variant:true,cat:'construction',title:'Water Proof Flag Markers / Survey Flags — 100 pack',price:22.89,img:'26kAAeSw8~ppOATQ'},
   {id:404,variant:true,cat:'construction',title:'Water Proof Flag Markers / Survey Flags — 200 pack',price:43.89,img:'26kAAeSw8~ppOATQ'},
   {id:405,variant:true,cat:'construction',title:'Water Proof Flag Markers / Survey Flags — 300 pack',price:66.89,img:'26kAAeSw8~ppOATQ'},
-  {id:801,variant:true,cat:'construction',title:'Retro Survey Targets — 20 pack',price:7.89,img:'HU0AAeSwC9ppOvAQ'},
-  {id:802,variant:true,cat:'construction',title:'Retro Survey Targets — 50 pack',price:13.89,img:'HU0AAeSwC9ppOvAQ'},
-  {id:803,variant:true,cat:'construction',title:'Retro Survey Targets — 100 pack',price:16.89,img:'HU0AAeSwC9ppOvAQ'},
-  {id:804,variant:true,cat:'construction',title:'Retro Survey Targets — 200 pack',price:31.89,img:'HU0AAeSwC9ppOvAQ'},
+  {id:801,variant:true,cat:'construction',title:'Retro Survey Targets — 20×20mm, 20 pack',price:7.89,img:'HU0AAeSwC9ppOvAQ'},
+  {id:802,variant:true,cat:'construction',title:'Retro Survey Targets — 20×20mm, 50 pack',price:13.89,img:'HU0AAeSwC9ppOvAQ'},
+  {id:803,variant:true,cat:'construction',title:'Retro Survey Targets — 20×20mm, 100 pack',price:16.89,img:'HU0AAeSwC9ppOvAQ'},
+  {id:804,variant:true,cat:'construction',title:'Retro Survey Targets — 20×20mm, 200 pack',price:31.89,img:'HU0AAeSwC9ppOvAQ'},
+  {id:805,variant:true,cat:'construction',title:'Retro Survey Targets — 20×20mm, 30 pack',price:11.79,img:'HU0AAeSwC9ppOvAQ'},
+  {id:806,variant:true,cat:'construction',title:'Retro Survey Targets — 30×30mm, 20 pack',price:8.89,img:'HU0AAeSwC9ppOvAQ'},
+  {id:807,variant:true,cat:'construction',title:'Retro Survey Targets — 30×30mm, 30 pack',price:12.89,img:'HU0AAeSwC9ppOvAQ'},
+  {id:808,variant:true,cat:'construction',title:'Retro Survey Targets — 30×30mm, 50 pack',price:17.89,img:'HU0AAeSwC9ppOvAQ'},
+  {id:809,variant:true,cat:'construction',title:'Retro Survey Targets — 30×30mm, 100 pack',price:29.89,img:'HU0AAeSwC9ppOvAQ'},
+  {id:810,variant:true,cat:'construction',title:'Retro Survey Targets — 50×50mm, 20 pack',price:13.89,img:'HU0AAeSwC9ppOvAQ'},
+  {id:811,variant:true,cat:'construction',title:'Retro Survey Targets — 50×50mm, 30 pack',price:18.89,img:'HU0AAeSwC9ppOvAQ'},
+  {id:812,variant:true,cat:'construction',title:'Retro Survey Targets — 50×50mm, 50 pack',price:32.89,img:'HU0AAeSwC9ppOvAQ'},
+  {id:813,variant:true,cat:'construction',title:'Retro Survey Targets — 100×100mm Yellow, 10 pack',price:32.89,img:'HU0AAeSwC9ppOvAQ'},
+  {id:814,variant:true,cat:'construction',title:'Retro Survey Targets — 100×100mm Yellow, 20 pack',price:63.89,img:'HU0AAeSwC9ppOvAQ'},
+  {id:815,variant:true,cat:'construction',title:'Retro Survey Targets — 100×100mm Yellow Magnetic, 10 pack',price:36.89,img:'HU0AAeSwC9ppOvAQ'},
+  {id:816,variant:true,cat:'construction',title:'Retro Survey Targets — 100×100mm Yellow Magnetic, 20 pack',price:71.89,img:'HU0AAeSwC9ppOvAQ'},
   {id:901,variant:true,cat:'construction',title:'Plastic Barrier Mesh — Orange mesh netting only',price:21.89,img:'~9sAAeSwWvdpOFKa'},
   {id:902,variant:true,cat:'construction',title:'Plastic Barrier Mesh — Orange mesh + 10 pins',price:39.39,img:'~9sAAeSwWvdpOFKa'},
   {id:903,variant:true,cat:'construction',title:'Plastic Barrier Mesh — 5 Metal Pins',price:12.89,img:'~9sAAeSwWvdpOFKa'},
@@ -1852,8 +1864,9 @@ function renderGrid(){
   });
 }
 
-function addToBasket(id){
-  basketItems[id] = (basketItems[id]||0) + 1;
+function addToBasket(id, opts){
+  const key = opts ? `${id}|${opts}` : String(id);
+  basketItems[key] = (basketItems[key]||0) + 1;
   updateBasketCount();
   renderBasketDrawer();
   showToast('Added to basket.');
@@ -1872,6 +1885,9 @@ function removeFromBasket(id){
   updateBasketCount();
   renderBasketDrawer();
 }
+
+function keyOptions(key){ const i=String(key).indexOf('|'); return i<0 ? '' : String(key).slice(i+1); }
+function escHtml(s){ return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 
 function basketCount(){
   return Object.values(basketItems).reduce((a,b)=>a+b,0);
@@ -1898,15 +1914,15 @@ function renderBasketDrawer(){
       const p = PRODUCTS.find(x=>x.id===parseInt(id,10));
       if(!p) return '';
       return `
-        <div class="bd-item" data-id="${p.id}">
+        <div class="bd-item" data-id="${escHtml(id)}">
           <img src="${imgUrl(p.id)}" alt="${p.title}">
           <div>
-            <div class="bd-item-title">${p.title}</div>
+            <div class="bd-item-title">${p.title}${keyOptions(id) ? `<div class="os-item-qty">${escHtml(keyOptions(id))}</div>` : ''}</div>
             <div class="bd-qty">
-              <button class="bd-dec" data-id="${p.id}">−</button>
+              <button class="bd-dec" data-id="${escHtml(id)}">−</button>
               <span>${qty}</span>
-              <button class="bd-inc" data-id="${p.id}">+</button>
-              <button class="bd-remove" data-id="${p.id}">Remove</button>
+              <button class="bd-inc" data-id="${escHtml(id)}">+</button>
+              <button class="bd-remove" data-id="${escHtml(id)}">Remove</button>
             </div>
           </div>
           <div class="bd-item-price">£${(p.price*qty).toFixed(2)}</div>
@@ -1915,9 +1931,9 @@ function renderBasketDrawer(){
     }).join('');
   }
   document.getElementById('bd-total').textContent = `£${basketTotal().toFixed(2)}`;
-  body.querySelectorAll('.bd-inc').forEach(b=>b.addEventListener('click',()=>changeQty(parseInt(b.dataset.id,10),1)));
-  body.querySelectorAll('.bd-dec').forEach(b=>b.addEventListener('click',()=>changeQty(parseInt(b.dataset.id,10),-1)));
-  body.querySelectorAll('.bd-remove').forEach(b=>b.addEventListener('click',()=>removeFromBasket(parseInt(b.dataset.id,10))));
+  body.querySelectorAll('.bd-inc').forEach(b=>b.addEventListener('click',()=>changeQty(b.dataset.id,1)));
+  body.querySelectorAll('.bd-dec').forEach(b=>b.addEventListener('click',()=>changeQty(b.dataset.id,-1)));
+  body.querySelectorAll('.bd-remove').forEach(b=>b.addEventListener('click',()=>removeFromBasket(b.dataset.id)));
 }
 
 function openBasket(){
@@ -1947,7 +1963,7 @@ function orderSummaryHtml(items){
     if(!p) return '';
     return `<div class="os-item">
       <img src="${imgUrl(p.id)}" alt="${p.title}">
-      <div class="os-item-title">${p.title}<div class="os-item-qty">Qty ${qty}</div></div>
+      <div class="os-item-title">${p.title}${keyOptions(id) ? `<div class="os-item-qty">${escHtml(keyOptions(id))}</div>` : ''}<div class="os-item-qty">Qty ${qty}</div></div>
       <div class="os-item-price">£${(p.price*qty).toFixed(2)}</div>
     </div>`;
   }).join('');
@@ -1982,15 +1998,15 @@ function renderCheckoutPage(){
           ${items.map(([id,qty])=>{
             const p = PRODUCTS.find(x=>x.id===parseInt(id,10));
             if(!p) return '';
-            return `<div class="bd-item" data-id="${p.id}">
+            return `<div class="bd-item" data-id="${escHtml(id)}">
               <img src="${imgUrl(p.id)}" alt="${p.title}">
               <div>
-                <div class="bd-item-title">${p.title}</div>
+                <div class="bd-item-title">${p.title}${keyOptions(id) ? `<div class="os-item-qty">${escHtml(keyOptions(id))}</div>` : ''}</div>
                 <div class="bd-qty">
-                  <button class="bd-dec" data-id="${p.id}">−</button>
+                  <button class="bd-dec" data-id="${escHtml(id)}">−</button>
                   <span>${qty}</span>
-                  <button class="bd-inc" data-id="${p.id}">+</button>
-                  <button class="bd-remove" data-id="${p.id}">Remove</button>
+                  <button class="bd-inc" data-id="${escHtml(id)}">+</button>
+                  <button class="bd-remove" data-id="${escHtml(id)}">Remove</button>
                 </div>
               </div>
               <div class="bd-item-price">£${(p.price*qty).toFixed(2)}</div>
@@ -2004,9 +2020,9 @@ function renderCheckoutPage(){
         ${orderSummaryHtml(items)}
       </div>
     </div>`;
-    view.querySelectorAll('.bd-inc').forEach(b=>b.addEventListener('click',()=>{changeQty(parseInt(b.dataset.id,10),1);renderCheckoutPage();}));
-    view.querySelectorAll('.bd-dec').forEach(b=>b.addEventListener('click',()=>{changeQty(parseInt(b.dataset.id,10),-1);renderCheckoutPage();}));
-    view.querySelectorAll('.bd-remove').forEach(b=>b.addEventListener('click',()=>{removeFromBasket(parseInt(b.dataset.id,10));renderCheckoutPage();}));
+    view.querySelectorAll('.bd-inc').forEach(b=>b.addEventListener('click',()=>{changeQty(b.dataset.id,1);renderCheckoutPage();}));
+    view.querySelectorAll('.bd-dec').forEach(b=>b.addEventListener('click',()=>{changeQty(b.dataset.id,-1);renderCheckoutPage();}));
+    view.querySelectorAll('.bd-remove').forEach(b=>b.addEventListener('click',()=>{removeFromBasket(b.dataset.id);renderCheckoutPage();}));
     document.getElementById('to-step-2').addEventListener('click',()=>{checkoutStep=2;renderCheckoutPage();window.scrollTo(0,0);});
     return;
   }
@@ -2092,8 +2108,9 @@ function renderCheckoutPage(){
           method:'POST',
           headers:{'Content-Type':'application/json'},
           body: JSON.stringify({
-            items: items.map(([id,qty])=>({id:parseInt(id,10),qty})),
+            items: items.map(([id,qty])=>({id:parseInt(id,10),qty,options:keyOptions(id)})),
             email: deliveryData.email,
+            delivery: deliveryData,
           }),
         });
         const data = await res.json();
@@ -2210,6 +2227,8 @@ function renderProductPage(id){
             variantId ? `data-variant-id="${variantId}"` : '',
             price != null ? `data-price="${price}"` : '',
             img ? `data-img="${img}"` : '',
+            (typeof v === 'object' && v.size) ? `data-size="${v.size}"` : '',
+            (typeof v === 'object' && v.sizes) ? `data-sizes="${v.sizes}"` : '',
           ].filter(Boolean).join(' ');
           return `<button class="opt-pill ${i===0?'sel':''}" type="button" ${attrs}>${name}</button>`;
         }).join('')}
@@ -2291,7 +2310,13 @@ function renderProductPage(id){
 
   document.getElementById('pd-add-btn').addEventListener('click', (e)=>{
     const selId = parseInt(e.target.dataset.selectedId, 10);
-    addToBasket(selId);
+    // Record choices that don't change the price (colour, type...) so they reach the order
+    const chosen = [...view.querySelectorAll('.opt-group')].filter(g=>g.style.display!=='none' && g.querySelector('.opt-pills')?.dataset.priced!=='true').map(g=>{
+      const sel = g.querySelector('.opt-pill.sel');
+      const label = (g.querySelector('h4')?.textContent||'').replace(' (affects price)','');
+      return sel ? `${label}: ${sel.textContent.trim()}` : '';
+    }).filter(Boolean).join(', ');
+    addToBasket(selId, chosen);
   });
   view.querySelectorAll('.opt-pills').forEach(group=>{
     group.querySelectorAll('.opt-pill').forEach(btn=>{
@@ -2306,9 +2331,25 @@ function renderProductPage(id){
         if(btn.dataset.img){
           document.getElementById('pd-main-img').src = imgUrl(btn.dataset.img);
         }
+        if(group.dataset.priced === 'true') filterSizeOptions();
       });
     });
   });
+  // Options that only exist for some sizes (data-sizes) follow the selected priced option's data-size
+  function filterSizeOptions(){
+    const selSize = view.querySelector('.opt-pills[data-priced="true"] .opt-pill.sel')?.dataset.size;
+    view.querySelectorAll('.opt-group').forEach(g=>{
+      const pills = [...g.querySelectorAll('.opt-pill[data-sizes]')];
+      if(!pills.length || !selSize) return;
+      pills.forEach(p=>{ p.style.display = p.dataset.sizes.split(',').includes(selSize) ? '' : 'none'; });
+      const visible = pills.filter(p=>p.style.display!=='none');
+      g.style.display = visible.length ? '' : 'none';
+      if(visible.length && !visible.some(p=>p.classList.contains('sel'))){
+        pills.forEach(p=>p.classList.remove('sel')); visible[0].classList.add('sel');
+      }
+    });
+  }
+  filterSizeOptions();
   view.querySelectorAll('.add-btn').forEach(btn=>{
     btn.addEventListener('click',(e)=>{
       e.preventDefault();
