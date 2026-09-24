@@ -5,20 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Yorkwork — Trade Stock, Straight From the Warehouse</title>
 <meta name="description" content="Construction and survey equipment, packing supplies, livestock fencing, bait boat parts and home security sensors — sold direct from the Yorkwork warehouse, no marketplace fees. UK-wide dispatch.">
-<link rel="canonical" href="https://yorkwork.netlify.app/">
+<link rel="canonical" href="https://yorkwork.co.uk/">
 
 <!-- Open Graph / social share previews -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Yorkwork">
 <meta property="og:title" content="Yorkwork — Trade Stock, Straight From the Warehouse">
 <meta property="og:description" content="Construction and survey equipment, packing supplies, livestock fencing, bait boat parts and home security sensors — sold direct from the warehouse, no marketplace fees.">
-<meta property="og:url" content="https://yorkwork.netlify.app/">
-<meta property="og:image" content="https://yorkwork.netlify.app/images/1.jpg">
+<meta property="og:url" content="https://yorkwork.co.uk/">
+<meta property="og:image" content="https://yorkwork-cloudflare-backend.alisulaiman595.workers.dev/images/1.jpg">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Yorkwork — Trade Stock, Straight From the Warehouse">
 <meta name="twitter:description" content="Construction and survey equipment, packing supplies, livestock fencing, bait boat parts and home security sensors — sold direct from the warehouse.">
-<meta name="twitter:image" content="https://yorkwork.netlify.app/images/1.jpg">
+<meta name="twitter:image" content="https://yorkwork-cloudflare-backend.alisulaiman595.workers.dev/images/1.jpg">
 
 <meta name="robots" content="index, follow">
 
@@ -28,7 +28,7 @@
   "@type": "Store",
   "name": "Yorkwork",
   "description": "Trade stock warehouse selling construction and survey equipment, packing supplies, livestock fencing, bait boat parts and home security sensors direct to the public.",
-  "url": "https://yorkwork.netlify.app/",
+  "url": "https://yorkwork.co.uk/",
   "foundingDate": "2018",
   "areaServed": "GB"
 }
@@ -2329,11 +2329,11 @@ function renderProductPage(id){
     "@type": "Product",
     "name": p.title,
     "description": p.desc,
-    "image": `${SITE_URL}/images/${p.id}.jpg`,
+    "image": `${BACKEND_URL}/images/${p.id}.jpg`,
     "brand": { "@type": "Brand", "name": brand || "Yorkwork" },
     "offers": {
       "@type": "Offer",
-      "url": `${SITE_URL}/#/product/${p.id}`,
+      "url": `${SITE_URL}/product/${p.id}/`,
       "priceCurrency": "GBP",
       "price": p.price.toFixed(2),
       "availability": "https://schema.org/InStock"
@@ -2636,7 +2636,7 @@ function renderSpecialRequestPage(){
   });
 }
 
-const SITE_URL = 'https://yorkwork.netlify.app';
+const SITE_URL = 'https://yorkwork.co.uk';
 const DEFAULT_TITLE = 'Yorkwork — Trade Stock, Straight From the Warehouse';
 const DEFAULT_DESC = 'Construction and survey equipment, packing supplies, livestock fencing, bait boat parts and home security sensors — sold direct from the Yorkwork warehouse, no marketplace fees. UK-wide dispatch.';
 
@@ -2644,7 +2644,7 @@ function setSEO(title, description, image, path, noindex){
   document.title = title;
   const desc = description || DEFAULT_DESC;
   const url = SITE_URL + (path || '/');
-  const img = image ? (SITE_URL + '/' + image) : (SITE_URL + '/images/1.jpg');
+  const img = image ? (BACKEND_URL + '/' + image) : (BACKEND_URL + '/images/1.jpg');
 
   const setMeta = (selector, attr, content) => {
     const el = document.querySelector(selector);
