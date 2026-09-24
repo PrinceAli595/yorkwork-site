@@ -1194,7 +1194,219 @@
     border:1.5px solid var(--line);background:var(--concrete);
     padding:11px 12px;font-family:'Inter',sans-serif;font-size:14px;outline:none;
   }
-  .form-group te        <li><a href="#/contact">Trade Accounts</a></li>
+  .form-group textarea:focus{border-color:var(--ink);}
+  .honeypot{position:absolute;left:-9999px;top:-9999px;}
+  .contact-side{
+    background:var(--ink);color:var(--white);padding:28px;height:fit-content;
+  }
+  .contact-side h3{font-size:15px;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid #2c3136;}
+  .contact-side ul{list-style:none;margin:0 0 20px;padding:0;}
+  .contact-side li{
+    font-size:13px;color:#c7cbd0;padding:9px 0;border-bottom:1px dashed #2c3136;
+  }
+  .contact-side li b{color:var(--white);display:block;font-family:'Roboto Mono',monospace;font-size:10.5px;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:3px;color:var(--hazard);}
+  .form-status{
+    font-family:'Roboto Mono',monospace;font-size:12.5px;
+    padding:12px 14px;margin-top:16px;display:none;
+  }
+  .form-status.ok{background:#e8f5e9;border:1px solid #2e7d32;color:#1b5e20;display:block;}
+  .form-status.err{background:#fdeceb;border:1px solid var(--rust);color:var(--rust);display:block;}
+  .form-status.offline{background:var(--concrete-2);border:1px solid var(--line);color:var(--steel);display:block;}
+  @media (max-width:860px){
+    .contact-wrap{grid-template-columns:1fr;}
+  }
+
+  /* ---------- RETURNS ---------- */
+  .returns-steps{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    background:var(--ink);border:1px solid var(--ink);margin:36px 0;
+  }
+  .returns-steps div{background:var(--white);padding:22px 20px;}
+  .returns-steps .step-n{
+    font-family:'Oswald',sans-serif;font-size:26px;color:var(--signal);margin-bottom:8px;
+  }
+  .returns-steps h4{font-size:14px;margin-bottom:8px;}
+  .returns-steps p{font-size:12.5px;color:var(--steel);margin:0;line-height:1.5;}
+  .policy-note{
+    background:var(--concrete-2);border-left:3px solid var(--hazard);
+    padding:14px 18px;font-size:13px;color:var(--steel);margin:26px 0;line-height:1.6;
+  }
+  @media (max-width:700px){
+    .returns-steps{grid-template-columns:1fr;}
+  }
+
+  .special-callout{
+    margin-top:40px;
+    background:var(--ink);color:var(--white);
+    padding:28px 32px;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:20px;flex-wrap:wrap;
+  }
+  .special-callout h4{font-family:'Oswald',sans-serif;font-size:18px;text-transform:uppercase;margin-bottom:4px;}
+  .special-callout p{font-size:13px;color:#c7cbd0;margin:0;}
+  .special-callout .btn{white-space:nowrap;}
+  @media (max-width:860px){
+    .product-detail{grid-template-columns:1fr;gap:28px;}
+  }
+
+  @media (max-width:860px){
+    nav.primary-nav{display:none;}
+    .hero-inner{grid-template-columns:1fr;}
+    .footer-inner{grid-template-columns:1fr 1fr;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .ticker{animation:none;}
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <span class="mark">YW</span>
+      <span class="word">YORK<span>WORK</span></span>
+    </div>
+    <nav class="primary-nav">
+      <a href="#" data-cat="construction" class="nav-cat nav-primary">Construction</a>
+      <a href="#catalog" class="nav-cat" data-cat="all">All Stock</a>
+      <a href="#/about" class="about-link">About</a>
+    </nav>
+    <div class="header-actions">
+      <button class="basket-btn" id="basket-btn">Basket <span id="basket-count">0</span></button>
+    </div>
+  </div>
+  <div class="trust-bar">
+    <span>✓ SAME-DAY DISPATCH</span>
+    <span>✓ VAT INVOICES ON REQUEST</span>
+    <span>✓ TRADE ACCOUNTS WELCOME</span>
+    <span>✓ UK-WIDE DELIVERY</span>
+  </div>
+</header>
+
+<div id="basket-overlay"></div>
+<aside id="basket-drawer">
+  <div class="bd-head">
+    <h3>Your Basket</h3>
+    <button id="bd-close" aria-label="Close basket">✕</button>
+  </div>
+  <div id="bd-body"></div>
+  <div class="bd-foot">
+    <div class="bd-total-row">
+      <span>Subtotal</span>
+      <span id="bd-total">£0.00</span>
+    </div>
+    <button class="btn btn-primary" id="bd-checkout" style="width:100%;text-align:center;">Checkout</button>
+    <div class="bd-note">Checkout isn't wired up yet — this is a preview of how the basket will work.</div>
+  </div>
+</aside>
+
+<div class="hazard-stripe"></div>
+
+<main id="home-view">
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="stamp">● SITE &amp; SURVEY EQUIPMENT SPECIALISTS</div>
+      <h1>BUILT FOR<em>THE SITE.</em></h1>
+      <p>Yorkwork stocks survey gear, laser levels, concrete testing kit and site equipment, sold direct from the warehouse floor at trade prices. We also carry a small range of other trade stock — packing supplies, livestock fencing, bait boat parts — alongside the core construction range.</p>
+      <div class="hero-ctas">
+        <a href="#catalog" class="btn btn-primary nav-cat" data-cat="construction">Browse Construction Stock</a>
+        <a href="#categories" class="btn btn-ghost">View All Bays</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="row"><span class="label">Construction &amp; survey lines</span><span class="num">25</span></div>
+      <div class="row"><span class="label">Total lines in stock</span><span class="num">45</span></div>
+      <div class="row"><span class="label">Units sold to date</span><span class="num">2,700+</span></div>
+      <div class="row"><span class="label">UK dispatch points</span><span class="num">04</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker-wrap">
+  <div class="ticker" id="ticker"></div>
+</div>
+
+<section class="band" id="categories">
+  <div class="band-inner">
+    <h2>Built around <span>construction &amp; survey stock.</span></h2>
+    <div id="featured-bay"></div>
+    <div class="secondary-head">Also stocked in the warehouse</div>
+    <div class="bay-grid secondary" id="bay-grid"></div>
+  </div>
+</section>
+
+<section class="catalog" id="catalog">
+  <div class="catalog-head">
+    <div>
+      <h2>Full Stock List</h2>
+      <div class="sub" id="result-count">SHOWING 25 / 45 LINES · CONSTRUCTION</div>
+    </div>
+    <div class="search-box">
+      <input type="text" id="search" placeholder="SEARCH STOCK…">
+    </div>
+  </div>
+  <div class="filter-row" id="filter-row"></div>
+  <div class="brand-row" id="brand-row"></div>
+  <div class="grid" id="grid"></div>
+  <div class="special-callout">
+    <div>
+      <h4>Can't find what you're looking for?</h4>
+      <p>If it's not in the catalogue yet, we can probably still get it.</p>
+    </div>
+    <a href="#/special-request" class="btn btn-primary nav-cat" data-cat="all">Make a Special Request →</a>
+  </div>
+</section>
+
+</main>
+
+<main id="product-view" style="display:none;"></main>
+
+<main id="about-view" style="display:none;"></main>
+
+<main id="checkout-view" style="display:none;"></main>
+
+<main id="contact-view" style="display:none;"></main>
+
+<main id="returns-view" style="display:none;"></main>
+
+<main id="special-view" style="display:none;"></main>
+
+<main id="order-confirmed-view" style="display:none;"></main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="logo" style="margin-bottom:12px;">
+        <span class="mark">YW</span>
+        <span class="word" style="color:#14171a;">YORK<span>WORK</span></span>
+      </div>
+      <p style="font-size:13px;color:#4a5058;max-width:280px;line-height:1.6;">
+        Trade and general stock, sold direct from the warehouse floor at the same honest prices we've always run. <a href="#/about" class="nav-link-inline" style="text-decoration:underline;color:#4a5058;">Our story since 2018 →</a>
+      </p>
+    </div>
+    <div>
+      <h5>Bays</h5>
+      <ul id="footer-cats"></ul>
+    </div>
+    <div>
+      <h5>Help</h5>
+      <ul>
+        <li><a href="#/about">Delivery & Dispatch</a></li>
+        <li><a href="#/returns">Returns</a></li>
+        <li><a href="#/about">VAT Invoices</a></li>
+        <li><a href="#/contact">Contact the Warehouse</a></li>
+        <li><a href="#/special-request">Special Requests</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Yorkwork</h5>
+      <ul>
+        <li><a href="#/about">About</a></li>
+        <li><a href="#/contact">Trade Accounts</a></li>
         <li><a href="#/contact">Track an Order</a></li>
       </ul>
     </div>
@@ -1877,171 +2089,6 @@ function renderCheckoutPage(){
       btn.textContent = 'Redirecting to Stripe…';
       try{
         const res = await fetch(BACKEND_URL + '/api/create-checkout-session', {
-          method:'POST',
-          headers:{'Content-Type':'application/json'},
-          body: JSON.stringify({
-            items: items.map(([id,qty])=>({id:parseInt(id,10),qty})),
-            email: deliveryData.email,
-          }),
-        });
-        const data = await res.json();
-        if(res.ok && data.ok && data.url){
-          window.location.href = data.url;
-        }else{
-          statusEl.textContent = data.error || 'Could not start checkout. Please try again.';
-          btn.disabled = false;
-          btn.textContent = 'Continue to Payment →';
-        }
-      }catch(err){
-        statusEl.textContent = 'Could not reach the server. Please try again.';
-        btn.disabled = false;
-        btn.textContent = 'Continue to Payment →';
-      }
-    });
-    return;
-  }
-
-  if(checkoutStep === 4){
-    if(!lastOrder){
-      view.innerHTML = `<div class="checkout-wrap"><div class="empty-state" style="padding:80px 20px;">NO RECENT ORDER FOUND.<br><a href="#catalog" class="nav-cat" data-cat="all">← Back to the warehouse</a></div></div>`;
-      return;
-    }
-    const rows = lastOrder.items.map(({p,qty})=>`
-      <div class="os-item">
-        <img src="${imgUrl(p.id)}" alt="${p.title}">
-        <div class="os-item-title">${p.title}<div class="os-item-qty">Qty ${qty}</div></div>
-        <div class="os-item-price">£${(p.price*qty).toFixed(2)}</div>
-      </div>`).join('');
-    view.innerHTML = `<div class="confirmation">
-      <div class="ok-stamp">✓ Order Received</div>
-      <h1>Thanks — that's confirmed.</h1>
-      <div class="order-no">Order number <b>${lastOrder.orderNo}</b> · a confirmation would be sent to <b>${lastOrder.delivery.email}</b></div>
-      <div class="confirmation-summary">
-        ${rows}
-        <div class="os-total" style="color:var(--signal);"><span>Total Paid</span><span>£${lastOrder.total.toFixed(2)}</span></div>
-      </div>
-      <p style="font-family:'Roboto Mono',monospace;font-size:11.5px;color:var(--steel);margin-bottom:30px;">This is a demo confirmation — no real payment was taken and no order has actually been dispatched.</p>
-      <a href="#catalog" class="btn btn-primary nav-cat" data-cat="all" style="display:inline-block;">Continue Shopping</a>
-    </div>`;
-  }
-}
-
-/* ---------- ORDER CONFIRMATION (post-Stripe redirect) ---------- */
-function parseHashQuery(){
-  const hash = window.location.hash;
-  const qIndex = hash.indexOf('?');
-  if(qIndex === -1) return new URLSearchParams();
-  return new URLSearchParams(hash.slice(qIndex+1));
-}
-
-async function renderOrderConfirmedPage(){
-  const view = document.getElementById('order-confirmed-view');
-  const params = parseHashQuery();
-  const sessionId = params.get('session_id');
-
-  if(!sessionId){
-    view.innerHTML = `<div class="checkout-wrap"><div class="empty-state" style="padding:80px 20px;">NO ORDER REFERENCE FOUND.<br><a href="#catalog" class="nav-cat" data-cat="all">← Back to the warehouse</a></div></div>`;
-    return;
-  }
-
-  view.innerHTML = `<div class="oc-loading"><div class="oc-spinner"></div>CONFIRMING YOUR PAYMENT WITH STRIPE…</div>`;
-
-  if(!BACKEND_URL){
-    view.innerHTML = `<div class="checkout-wrap"><div class="empty-state" style="padding:80px 20px;">PAYMENTS BACKEND NOT CONNECTED.<br><a href="#catalog" class="nav-cat" data-cat="all">← Back to the warehouse</a></div></div>`;
-    return;
-  }
-
-  try{
-    const res = await fetch(BACKEND_URL + '/api/checkout-session/' + encodeURIComponent(sessionId));
-    const data = await res.json();
-
-    if(res.ok && data.ok && data.paid){
-      basketItems = {};
-      updateBasketCount();
-      view.innerHTML = `<div class="confirmation">
-        <div class="ok-stamp">✓ Payment Successful</div>
-        <h1>Thanks — that's confirmed.</h1>
-        <div class="order-no">Reference <b>${sessionId.slice(-12).toUpperCase()}</b>${data.email ? ` · a confirmation would be sent to <b>${data.email}</b>` : ''}</div>
-        <div class="confirmation-summary">
-          <div class="os-total" style="color:var(--signal);"><span>Total Paid</span><span>£${data.amount.toFixed(2)}</span></div>
-        </div>
-        <p style="font-family:'Roboto Mono',monospace;font-size:11.5px;color:var(--steel);margin-bottom:30px;">Payment was processed securely by Stripe. This order is now saved in the Yorkwork admin dashboard.</p>
-        <a href="#catalog" class="btn btn-primary nav-cat" data-cat="all" style="display:inline-block;">Continue Shopping</a>
-      </div>`;
-    }else{
-      view.innerHTML = `<div class="checkout-wrap"><div class="empty-state" style="padding:80px 20px;">PAYMENT NOT COMPLETED.<br>YOUR BASKET IS STILL SAVED.<br><a href="#/checkout" class="nav-cat" data-cat="all">← Back to checkout</a></div></div>`;
-    }
-  }catch(err){
-    view.innerHTML = `<div class="checkout-wrap"><div class="empty-state" style="padding:80px 20px;">COULD NOT CONFIRM PAYMENT STATUS.<br><a href="#/checkout" class="nav-cat" data-cat="all">← Back to checkout</a></div></div>`;
-  }
-}
-
-/* ---------- ROUTING / PRODUCT DETAIL ---------- */
-function renderProductPage(id){
-  const p = PRODUCTS.find(x=>x.id===id);
-  const view = document.getElementById('product-view');
-  if(!p){
-    view.innerHTML = `<div class="empty-state" style="padding:90px 20px;">STOCK LINE NOT FOUND.<br><a href="#catalog" class="nav-cat" data-cat="all">← Back to warehouse</a></div>`;
-    return;
-  }
-  const specsHtml = p.specs.map(([k,v])=>`<div class="spec-row"><span class="k">${k}</span><span class="v">${v}</span></div>`).join('');
-  const optionsHtml = (p.options||[]).map(group=>`
-    <div class="opt-group">
-      <h4>${group.label}${group.priced ? ' (affects price)' : ''}</h4>
-      <div class="opt-pills" ${group.priced ? 'data-priced="true"' : ''}>
-        ${group.values.map((v,i)=>{
-          const name = typeof v === 'string' ? v : v.name;
-          const variantId = typeof v === 'object' ? v.variantId : null;
-          const price = typeof v === 'object' ? v.price : null;
-          const img = typeof v === 'object' ? v.img : null;
-          const attrs = [
-            variantId ? `data-variant-id="${variantId}"` : '',
-            price != null ? `data-price="${price}"` : '',
-            img ? `data-img="${img}"` : '',
-          ].filter(Boolean).join(' ');
-          return `<button class="opt-pill ${i===0?'sel':''}" type="button" ${attrs}>${name}</button>`;
-        }).join('')}
-      </div>
-    </div>
-  `).join('');
-  // Default selected variant is whichever priced option's first pill represents (or the base product itself if no priced options)
-  const pricedGroup = (p.options||[]).find(g=>g.priced);
-  const defaultVariantId = pricedGroup ? pricedGroup.values[0].variantId : p.id;
-  const defaultPrice = pricedGroup ? pricedGroup.values[0].price : p.price;
-  const related = PRODUCTS.filter(x=>!x.variant && x.cat===p.cat && x.id!==p.id).slice(0,4);
-  const relatedHtml = related.map(r=>`
-    <div class="card">
-      <div class="tag-stack">${getBadges(r)}</div>
-      <a href="#/product/${r.id}" class="card-link">
-        <div class="img-wrap"><img src="${imgUrl(r.id)}" alt="${r.title}" loading="lazy"></div>
-        <div class="body">
-          <div class="cat-label">${catLabel(r.cat)}${getBrand(r) ? ' · '+getBrand(r) : ''}</div>
-          <h3>${r.title}</h3>
-          <div class="meta">${r.meta}</div>
-        </div>
-      </a>
-      <div class="body" style="padding-top:0;">
-        <div class="bottom-row">
-          <div class="price">£${r.price.toFixed(2)}</div>
-          <button class="add-btn" data-id="${r.id}">Add</button>
-        </div>
-      </div>
-    </div>
-  `).join('');
-
-  const compatItems = (p.compatWith||[]).map(id=>PRODUCTS.find(x=>x.id===id)).filter(Boolean);
-  const compatHtml = compatItems.map(r=>`
-    <a href="#/product/${r.id}" class="compat-chip">
-      <img src="${imgUrl(r.id)}" alt="${r.title}">
-      <span>${r.title}</span>
-    </a>
-  `).join('');
-
-  const brand = getBrand(p);
-
-  view.innerHTML = `
-    <div class="breadcrumb">
-      <a L + '/api/create-checkout-session', {
           method:'POST',
           headers:{'Content-Type':'application/json'},
           body: JSON.stringify({
