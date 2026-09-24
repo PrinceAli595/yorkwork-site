@@ -1455,7 +1455,7 @@ const PRODUCTS = [
   {id:8,cat:'construction',title:'Retro Survey Targets for Site Survey & Control Stations',price:7.89,img:'HU0AAeSwC9ppOvAQ',meta:'options available',opts:true,
     desc:'Retro-reflective survey targets for total stations at control points. Short-range accuracy 3mm+2ppm; long-range 5mm+2ppm at 2.5 seconds.',
     specs:[['Brand','Unbranded'],['MPN','Survey Targets'],['Country of Origin','UK'],['Condition','New']],
-    options:[{label:'Size & pack',priced:true,values:[{name:'20×20mm · 20 pack',price:7.89,variantId:801,size:'20'},{name:'20×20mm · 30 pack',price:11.79,variantId:805,size:'20'},{name:'20×20mm · 50 pack',price:13.89,variantId:802,size:'20'},{name:'20×20mm · 100 pack',price:16.89,variantId:803,size:'20'},{name:'20×20mm · 200 pack',price:31.89,variantId:804,size:'20'},{name:'30×30mm · 20 pack',price:8.89,variantId:806,size:'30'},{name:'30×30mm · 30 pack',price:12.89,variantId:807,size:'30'},{name:'30×30mm · 50 pack',price:17.89,variantId:808,size:'30'},{name:'30×30mm · 100 pack',price:29.89,variantId:809,size:'30'},{name:'50×50mm · 20 pack',price:13.89,variantId:810,size:'50'},{name:'50×50mm · 30 pack',price:18.89,variantId:811,size:'50'},{name:'50×50mm · 50 pack',price:32.89,variantId:812,size:'50'},{name:'100×100mm Yellow · 10 pack',price:32.89,variantId:813,size:'100'},{name:'100×100mm Yellow · 20 pack',price:63.89,variantId:814,size:'100'},{name:'100×100mm Yellow Magnetic · 10 pack',price:36.89,variantId:815,size:'100'},{name:'100×100mm Yellow Magnetic · 20 pack',price:71.89,variantId:816,size:'100'}]},{label:'Colour',values:[{name:'Blue',img:8001,sizes:'20'},{name:'Orange',img:8002,sizes:'20,30,50'},{name:'Orange w/ Triangles',img:8003,sizes:'20,30'},{name:'Yellow',img:8,sizes:'20,30,50'},{name:'Red',img:8004,sizes:'20'},{name:'Silver',img:8005,sizes:'20,30,50'},{name:'Silver w/ Triangles',img:8007,sizes:'20'}]}]},
+    options:[{label:'Size & pack',priced:true,values:[{name:'20×20mm · 20 pack',price:7.89,variantId:801,size:'20'},{name:'20×20mm · 30 pack',price:11.79,variantId:805,size:'20'},{name:'20×20mm · 50 pack',price:13.89,variantId:802,size:'20'},{name:'20×20mm · 100 pack',price:16.89,variantId:803,size:'20'},{name:'20×20mm · 200 pack',price:31.89,variantId:804,size:'20'},{name:'30×30mm · 20 pack',price:8.89,variantId:806,size:'30'},{name:'30×30mm · 30 pack',price:12.89,variantId:807,size:'30'},{name:'30×30mm · 50 pack',price:17.89,variantId:808,size:'30'},{name:'30×30mm · 100 pack',price:29.89,variantId:809,size:'30'},{name:'50×50mm · 20 pack',price:13.89,variantId:810,size:'50'},{name:'50×50mm · 30 pack',price:18.89,variantId:811,size:'50'},{name:'50×50mm · 50 pack',price:32.89,variantId:812,size:'50'},{name:'100×100mm Yellow · 10 pack',price:32.89,variantId:813,size:'100',img:8},{name:'100×100mm Yellow · 20 pack',price:63.89,variantId:814,size:'100',img:8},{name:'100×100mm Yellow Magnetic · 10 pack',price:36.89,variantId:815,size:'100',img:8006},{name:'100×100mm Yellow Magnetic · 20 pack',price:71.89,variantId:816,size:'100',img:8006}]},{label:'Colour',values:[{name:'Blue',img:8001,sizes:'20'},{name:'Orange',img:8002,sizes:'20,30,50'},{name:'Orange w/ Triangles',img:8003,sizes:'20,30'},{name:'Yellow',img:8,sizes:'20,30,50'},{name:'Red',img:8004,sizes:'20'},{name:'Silver',img:8005,sizes:'20,30,50'},{name:'Silver w/ Triangles',img:8007,sizes:'20'}]}]},
   {id:9,cat:'construction',title:'Plastic Barrier Mesh Safety Fence Netting',price:12.89,img:'~9sAAeSwWvdpOFKa',meta:'14 sold · options available',opts:true,
     desc:'Heavy-duty orange plastic mesh safety fencing and barrier netting for site or garden use.',
     specs:[['Type','Mesh Fencing'],['Material','Plastic'],['Height','1m'],['Length','50m'],['Country of Origin','UK'],['Condition','New']],
@@ -1485,7 +1485,7 @@ const PRODUCTS = [
     desc:'High-accuracy 360° mini prism reflector for robotic total stations. Prism constant +30mm.',
     specs:[['Brand','Unbranded'],['MPN','Survey Prizm'],['Country of Origin','China'],['Condition','New']],
     compatWith:[20],
-    options:[{label:'Item',priced:true,values:[{name:'GRZ4 Big Prism',price:157.89,variantId:1501,img:1501},{name:'Mini Prism with metal poles',price:129.89,variantId:1502,img:1502},{name:'Mini Pogo',price:39.89,variantId:1503}]}]},
+    options:[{label:'Item',priced:true,values:[{name:'GRZ4 Big Prism',price:157.89,variantId:1501,img:1501},{name:'Mini Prism with metal poles',price:129.89,variantId:1502,img:1502},{name:'Mini Pogo',price:39.89,variantId:1503,img:1504}]}]},
   {id:16,cat:'construction',title:'New 360° Mini Prism for Robotic Total Station',price:138.89,img:'CikAAOSwcapb5~2u',meta:'12 sold · 8 watching',
     desc:'Small, low-cost alternative 360° mini prism offering pointing accuracy of 1.5mm. Adapter provides the correct offset so prism height can be read directly off the pole scale.',
     specs:[['Brand','Precise'],['Model','360'],['Country of Origin','China'],['Condition','New']],
@@ -2331,12 +2331,12 @@ function renderProductPage(id){
         if(btn.dataset.img){
           document.getElementById('pd-main-img').src = imgUrl(btn.dataset.img);
         }
-        if(group.dataset.priced === 'true') filterSizeOptions();
+        if(group.dataset.priced === 'true') filterSizeOptions(true);
       });
     });
   });
   // Options that only exist for some sizes (data-sizes) follow the selected priced option's data-size
-  function filterSizeOptions(){
+  function filterSizeOptions(fromClick){
     const selSize = view.querySelector('.opt-pills[data-priced="true"] .opt-pill.sel')?.dataset.size;
     view.querySelectorAll('.opt-group').forEach(g=>{
       const pills = [...g.querySelectorAll('.opt-pill[data-sizes]')];
@@ -2347,6 +2347,9 @@ function renderProductPage(id){
       if(visible.length && !visible.some(p=>p.classList.contains('sel'))){
         pills.forEach(p=>p.classList.remove('sel')); visible[0].classList.add('sel');
       }
+      // After a size change, show the photo of the colour that is now selected
+      const cur = visible.find(p=>p.classList.contains('sel'));
+      if(fromClick && cur && cur.dataset.img) document.getElementById('pd-main-img').src = imgUrl(cur.dataset.img);
     });
   }
   filterSizeOptions();
